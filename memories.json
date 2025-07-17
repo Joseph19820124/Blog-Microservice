@@ -1,0 +1,21 @@
+{
+  "memories": [
+    {
+      "id": "mem_1752742797818_vor7510kj",
+      "content": "Starting refactoring task for client directory. Must preserve ALL existing functionality while improving code quality. Zero tolerance for behavior changes.",
+      "type": "general",
+      "tags": [
+        "general",
+        "refactor",
+        "client",
+        "behavior-preservation"
+      ],
+      "timestamp": "2025-07-17T08:59:57.818Z",
+      "accessCount": 0,
+      "lastAccessed": "2025-07-17T08:59:57.818Z",
+      "lastVerified": "2025-07-17T08:59:57.818Z",
+      "status": "fresh"
+    }
+  ],
+  "lastUpdated": "2025-07-17T08:59:57.818Z"
+}
