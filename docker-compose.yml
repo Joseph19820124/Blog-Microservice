@@ -1,0 +1,61 @@
+version: '3'
+services:
+  posts:
+    build: ./posts
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - EVENT_BUS_URL=http://event-bus:4005
+    networks:
+      - blog-network
+
+  comments:
+    build: ./comments
+    ports:
+      - "4001:4001"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - blog-network
+
+  query:
+    build: ./query
+    ports:
+      - "4002:4002"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - blog-network
+
+  moderation:
+    build: ./moderation
+    ports:
+      - "4003:4003"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - blog-network
+
+  event-bus:
+    build: ./event-bus
+    ports:
+      - "4005:4005"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - blog-network
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    networks:
+      - blog-network
+
+networks:
+  blog-network:
+    driver: bridge
