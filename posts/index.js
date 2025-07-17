@@ -43,8 +43,9 @@ app.post('/events', (req, res) => {
 });
 
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(4000, () => {
-    console.log('Posts service listening on port 4000');
+  const PORT = process.env.PORT || 4000;
+  app.listen(PORT, () => {
+    console.log(`Posts service listening on port ${PORT}`);
   });
 }
 
